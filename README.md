@@ -1,68 +1,21 @@
 # Hackintosh-EFI-For-ASUS-B250M-i5-7500-RX580
 
-[中文说明](README_ZH.md)
+## 更新
+- 2025-01-08
+	- OC 0.9.9
+	- 常规更新KEXT
+	- 支持Ventura 13.6
+	- 将`Misc`-`Security`-`SecureBootModel`设置为`Disabled`以避免开机**oc grabbed zero systm-id for sb. this is not allowed halting on critlcal error**
+## 配置
 
-# # Introduction
+ - CPU: i5-7500
+ - 内存：天策 DDR4 16GB x 2
+ - 硬盘：
+ 	  - Crucial P3 2TB
+      - 西数机械蓝盘 1TB 
+ - 显卡：RX580 4G
 
-Recently, Xianyu received a piece of RX580 for personal use. I have made integration and modification after referring to a lot of articles and other predecessors' EFI. Thank you.
-
-No independent graphics card EFI, only added models, three code need to be generated to add.
-Core graphics card platform ID: 59120000, just a simple patch to add some attributes of the device, can be regenerated if necessary.
-
-# # Update
-- 2022-11-08
-	- OC 0.8.3
-	- Update KEXT regularly
-	- Support Ventura 13.0
-
-- 2021-10-31
-	- OC 0.7.5
-	- Update KEXT regularly
-	- Support Big Sur & Monterey
-
-- 2021-06-12
-	- OC 0.7
-	- Update KEXT regularly
-	- Support Big Sur & Monterey
-
-- 2021-05-05
-	- OC 0.6.9
-	- Update KEXT regularly
-	- Support Big Sur 11.3.1
-
-- 2020-12-31
-	- Added EFI without stand-alone display, model MacMini8,1
-
-- 2020-12-15
-	- Updated to Big Sur 11.1
-	- Replace boot program to OC 0.6.4
-
-- 2020-05-25
-	- Keyboard, mouse and Bluetooth interface are built in
-	- USB interface customization
-	- Delete some useless files
-	- Update Clover 5118
-
-- 2020-05-22
-	- Initial upload
-
-# # Configuration
-
-- CPU: i5-7500
-- Memory: Kingston DDR4 2400MHz 8GB x 2
-- hard drive:
-	- Toshiba RD500 500G M.2 NVME
-	- Samsung SSD 860 EVO 250GB SATA
-	- Samsung SSD 850 EVO M.2 250GB
-	- Western Digital Mechanical Blue Plate 1TB
-- Fan: Cool Blizzard Supreme T400i
-- Graphics card: Sapphire RX580 8G 2304SP
-- Network card: BCM94360CS2 + PCIE adapter card
-- Display: Viewsonic VX2478-4K-HD
-
-# # The Bios Settings
-(Refer to the following general options for Settings)
-
+## Bios设置
 ### Disable
 - Fast Boot
 - Secure Boot
@@ -70,41 +23,35 @@ Core graphics card platform ID: 59120000, just a simple patch to add some attrib
 - Parallel Port
 - VT-d
 - CSM
-- Thunderbolt
 - Intel SGX
 - Intel Platform Trust
-- CFG Lock
+- CFG Lock 
 
 ### Enable
 - VT-x
 - Above 4G decoding
 - Hyper-Threading
-- Execute Disable Bit
-- EHCI/XHCI Hand-off
-- OS Type: Windows 8.1/10 UEFI Mode
+- OS type: Other
 - DVMT Pre-Allocated(iGPU Memory): 64MB
 - SATA Mode: AHCI
 
-## Working status
+## 工作状态
 
-### Work normally:
+### 正常工作：
 
-- The sound card
-- The network card
-- Bluetooth
-- Airdrop
-- Hand off
-- App store
-- Sleep
-- H.264, HEVC hardware decoding, encoding, video processing
-- SATA SSD Trim (terminal input: sudo Trimforce Enable)
+- 1.声卡 
+- 2.网卡 
+- 3.蓝牙 
+- 4.Airdrop  
+- 5.接力 
+- 6.App store  
+- 7.睡眠  
+- 8.H.264、HEVC硬件解码、编码、视频处理
+- 9.SATA SSD Trim（终端输入：sudo trimforce enable）
 
-## Instructions for use
+## 致谢
 
-- The model has been set and can be installed normally. Please generate the three sizes by yourself
-
-# # Thanks To
-
-- [acidanthera](https://github.com/acidanthera)
-- [daliansky](https://github.com/daliansky/)
-- [Mrliu12123](http://bbs.pcbeta.com/viewthread-1851046-1-1.html)
+ - [acidanthera](https://github.com/acidanthera)
+ - [daliansky](https://github.com/daliansky/)
+ - [Mrliu12123](http://bbs.pcbeta.com/viewthread-1851046-1-1.html)
+ - [zsyshuyang](https://github.com/zsyshuyang)
